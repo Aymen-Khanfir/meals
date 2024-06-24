@@ -47,15 +47,13 @@ class _TabsScreenState extends State<TabsScreen> {
   }
 
   void _setScreen(String identifier) {
+    Navigator.of(context).pop();
     if (identifier == 'filters') {
       Navigator.of(context).push(
         MaterialPageRoute(
           builder: (ctx) => const FiltersScreen(),
         ),
       );
-    } else {
-      // Handle the close drawer if we are already in the Meals Categories Screen
-      Navigator.of(context).pop();
     }
   }
 
