@@ -21,13 +21,12 @@ class FiltersNotifier extends StateNotifier<Map<Filter, bool>> {
   }
 
   void setFilter(Filter filter, bool isActive) {
-    // TODO: Try mutating the state insted of reassigning a new value to it
-    // state[filter] = isActive;
+    state[filter] = isActive;
 
-    state = {
-      ...state,
-      filter: isActive,
-    };
+    // state = {
+    //   ...state,
+    //   filter: isActive,
+    // };
   }
 }
 
