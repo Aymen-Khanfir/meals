@@ -21,12 +21,13 @@ class FiltersNotifier extends StateNotifier<Map<Filter, bool>> {
   }
 
   void setFilter(Filter filter, bool isActive) {
-    state[filter] = isActive;
+    // this line of code works only if you mikssed the provider with local state
+    // state[filter] = isActive;
 
-    // state = {
-    //   ...state,
-    //   filter: isActive,
-    // };
+    state = {
+      ...state,
+      filter: isActive,
+    };
   }
 }
 
